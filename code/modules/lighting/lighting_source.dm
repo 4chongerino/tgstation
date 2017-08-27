@@ -111,6 +111,7 @@
 // The braces and semicolons are there to be able to do this on a single line.
 #define LUM_FALLOFF(C, T) (1 - CLAMP01(sqrt((C.x - T.x) ** 2 + (C.y - T.y) ** 2 + LIGHTING_HEIGHT) / max(1, light_range)))
 
+
 #define APPLY_CORNER(C)                      \
 	. = LUM_FALLOFF(C, pixel_turf);          \
 	. *= light_power;                        \

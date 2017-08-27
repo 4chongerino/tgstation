@@ -640,6 +640,15 @@
 		if(S.chemical_cost >=0 && S.can_be_used_by(src))
 			statpanel("[S.panel]",((S.chemical_cost > 0) ? "[S.chemical_cost]" : ""),S)
 
+/mob/proc/facedir(var/ndir)
+	if(!canface() || client.moving || world.time < client.move_delay)
+		return 0
+	setDir(ndir)
+//	if(buckled && buckled.buckle_movable)
+//		buckled.set_dir(ndir)
+	client.move_delay += movement_delay()
+	return 1
+
 // facing verbs
 /mob/proc/canface()
 	if(!canmove)

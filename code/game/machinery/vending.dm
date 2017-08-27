@@ -72,6 +72,8 @@
 		build_inventory(contraband, 1)
 		build_inventory(premium, 0, 1)
 
+	set_light(1,0.5)
+
 	slogan_list = splittext(product_slogans, ";")
 	// So not all machines speak at the exact same time.
 	// The first time this machine says something will be at slogantime + this random value,

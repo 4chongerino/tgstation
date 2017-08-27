@@ -255,7 +255,7 @@
 					burn_out()
 			else
 				use_power = ACTIVE_POWER_USE
-				set_light(brightness)
+				set_light(brightness,0.7,"#EEEEBB")
 	else
 		use_power = IDLE_POWER_USE
 		set_light(0)
@@ -580,7 +580,7 @@
 	icon_state = "ltube"
 	base_state = "ltube"
 	item_state = "c_tube"
-	brightness = 8
+	brightness = 2
 
 /obj/item/light/bulb
 	name = "light bulb"
@@ -590,7 +590,7 @@
 	item_state = "contvapour"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	brightness = 4
+	brightness = 1
 
 /obj/item/light/throw_impact(atom/hit_atom)
 	if(!..()) //not caught by a mob
